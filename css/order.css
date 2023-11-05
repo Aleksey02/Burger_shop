@@ -1,0 +1,202 @@
+.order{
+    position: relative;
+}
+.order__wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+    padding: 16px 10px;
+}
+.order__wrapper__list{
+    display: none;
+}
+.order__open .order__wrapper__list{
+    display: block;
+}
+.order__open .order__wrapper-title{
+    margin-bottom: 8px; /* !todo optimaze */
+}
+.order__wrapper-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+.order__wrapper-title::after{
+    content: '';
+    position: absolute;
+    outline: 3px solid transparent;
+    inset: 0;
+    border-radius: 12px;
+    pointer-events: none;
+}
+.order__wrapper-title:focus-visible:after{
+    outline-color: #FFAB08;
+}
+.order__title{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 16px */    
+}
+.order__count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    line-height: normal;
+    width: 32px;
+    height: 16px;
+    border-radius: 6px;
+    background: #F2F2F3;
+}
+
+.order__list{
+    margin-bottom: 13px;
+}
+
+.order__item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 0;
+    border-bottom: 1px solid #F2F2F3;
+}
+.order__item:first-child{
+    border-top: 1px solid #F2F2F3;
+}
+.order__image{
+    width: 64px;
+    height: 52px;
+    border-radius: 8px;
+}
+.order__product{
+    flex-grow: 1;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  
+}
+.order__product-title{
+    font-weight: 400;
+    margin-bottom: 1px;
+}
+.order__product-weight{
+    color: #B1B1B1;
+    margin-bottom: 6px;
+}
+.order__product-price{
+
+}
+.order__total{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 15.6px */
+    margin-bottom: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order__submit{
+    border-radius: 8px;
+    background: #FF7020;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 12px */
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 8px;
+}
+.order__apeal{
+    min-height: 24px;
+    color: #000;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 32px;
+    background: url(../images/delivery.png) left/24px no-repeat;
+}
+.order__close{
+    color: #B1B1B1;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.order__wrap-apeal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.order__empty{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 20.8px */
+}
+@media (min-width: 768px) {
+    .order{
+        width: 145px;
+        transition: width 0.1s ease-in-out;
+    }
+    .order.order__open{
+        width: 300px;
+    }
+}
+@media (min-width: 1024px) {
+    .order{
+        width: 300px;
+    }
+    .order__wrapper{
+        position: unset;
+        padding: 24px 16px;
+    }
+    .order__wrapper__list{
+        display: block;
+    }
+    .order__close{
+        display: none;
+    }
+    .order__wrapper-title{
+        margin-bottom: 12px;
+        pointer-events: none;
+    }
+    .order__wrapper-title:after{
+        content: none;
+    }
+    .order__title{
+        font-size: 24px;
+    }
+    .order__count{
+        font-size: 12px;
+        width: 41px;
+        height: 20px;
+    }
+    .order__total{
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+    .order__product-price{
+        font-size: 16px;
+    }
+    .order__submit{
+        border-radius: 12px;
+        font-size: 16px;
+        padding: 11px;
+    }
+    .order__apeal{
+        font-size: 12px;
+    }
+    .order__item{
+        padding: 15px 0;
+    }
+}
